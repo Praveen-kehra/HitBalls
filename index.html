@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: black;
+        }
+        .scoreElement{
+            position:fixed;
+            color: white;
+            margin-top: 5px;
+            margin-left: 5px;
+            user-select: none;
+        }
+        .container, .end{
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            position:fixed;
+            right: 50%;
+            margin-right: -10vw;
+            width: 20vw;
+            height: 18vh;
+            top: 50%;
+            margin-top: -9vh;
+            background-color: white;
+            padding: 5px;
+        }
+        #start ,#restart{
+            border: 1px solid green;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+        .end{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <strong>0</strong>
+        <p>Score</p>
+        <button id="start">Start Game</button>
+    </div>
+
+    <div class="end">
+        
+        <p>Score : <strong><span id='final-score'>0</span></strong></p>
+        Game Over!!! <br>
+        <!-- <button id="restart">Play Again</button> -->
+    </div>
+
+    <div class="scoreElement"><span>Score: </span> <span id="score">0</span></div>
+
+    <canvas></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
